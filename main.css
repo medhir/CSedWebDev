@@ -48,10 +48,64 @@ table {
   border-spacing: 0;
 }
 
-/* 
-  Panels 
-*/
+/***********************
+        grid
+***********************/
+.grid-container {
+  width: 100%;
+  max-width: 1200px;
+}
 
-#sidebar {
+/*clearfix for row content to stay within row*/
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+}
+
+.col-1 {
+    width: 16.66%; 
+}
+.col-2 {
+    width: 33.33%; 
+}
+.col-3 {
+    width: 50%; 
+}
+.col-4 {
+    width: 66.664%;
+}
+.col-5 {
+    width: 83.33%;
+}
+.col-6 {
+    width: 100%;
+}
+
+.grid-container * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.gutter {
+  padding: 12px;
+}
+
+/*navigation sidebar*/
+
+.sidebar {
+  top: 0;
+  height: 100%;
+}
+
+/*main page*/
+.main-content {
   height: 100%;
 }
