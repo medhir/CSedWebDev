@@ -107,6 +107,15 @@ body, html, .row, .grid-container, {
   height: 100vh;
 }
 
+.nav {
+  margin: 15px;
+}
+
+.nav li {
+  margin: 18px 0px;
+}
+
+
 /*main page*/
 /*.main-content {
   height: 100%;
@@ -144,5 +153,15 @@ h3 {
 }
 
 .nav a {
-  color: #FFF;
+  color: #2F5D7C;
+  text-decoration: none;
+  border: 2px solid;
+  border-color: #FFF;
+  background-color: #FFF;
+  padding: 2px;
+}
+
+.nav a:hover {
+  font-size: 1.15em;
+  margin-left: 2px;
 }
