@@ -1,0 +1,74 @@
+Today 
+--> Questions for the "Design" project
+
+Thursday
+--> Work on implmentation of "Design" project (quiz fun)
+
+Tuesday (4/14)
+--> Find resources for other sections
+
+Questions
+====================================
+1. What HTML tag should you use to allow a user to jump to different pages on your blog?
+2. What HTML tag should you use to identify a paragraph written on your blog?
+3. How would you designate a title?
+4. What tag would you use to identify a subheader under an article title?
+5. How would you provide links to other websites on your page?
+6. What could you call an icon on your website that the user can click to expect a particular action?
+	7. How would you implement this button?
+8. 
+
+...improvement!
+
+- HTML main structure
+	--> DOCTYPE : How do you declare an HTML page?
+		Doctype?
+		Head?
+		HTML?
+		Body?
+		-------> explanation of doctype?
+	--> <html>
+		-<head>
+			<title>
+			<meta> "metadata"
+			css file?
+		-<body>
+			content
+
+- the articles
+	-->Title
+		tag? <h1>
+	-->Subheader
+		tag? <h3>
+	-->date 
+		tag? <h4>
+	-->Content
+		tag <p>
+	-->Image associated with content
+		tag? <img> (src inclusion)
+
+- about the author
+	--> Author name
+		tag?  any <h*>
+	--> Contact Information?
+		- this is a list <li> (is it ordered? unordered? --- is it <ul> or <ol>)
+		-email
+		<a href"mailto:"">
+		-facebook
+		another <a>
+		-etc...
+		more <a>
+	--> "About" section
+
+- navigation between pages
+	---> would this be a list? what would you wrap this list in? (<nav>) [attempt is to think about structure]
+	- home
+	- about
+
+
+- css details
+
+
+
+- programming
+	- dedicated git explanation
