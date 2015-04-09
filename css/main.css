@@ -117,7 +117,7 @@ body, html, .row, .grid-container, {
 }
 
 .nav {
-  margin: 15px;
+  margin: 30px 15px;
 }
 
 .nav li {
@@ -188,8 +188,15 @@ h4 {
 .proj-title a {
   text-decoration: none;
   padding: 5px;
+  font-size: 0.85em;
+  background-color: #FF4646;
   border: 3px solid;
   border-color: #FF4646;
   border-radius: 5px;
-  color: #000;
+  color: #fff;
+}
+
+.proj-title a:hover {
+  background-color: #fff;
+  color: #FF4646;
 }
