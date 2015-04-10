@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="quizApp">
 	<head>
 		<title>What the Heck is Web Development?</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/glyphicons.css">
 		<link href='http://fonts.googleapis.com/css?family=Lobster|Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="lib/app.js"></script>
+		<script src="lib/codemirror.js"></script>
 	</head>	
 	<body>
 
@@ -24,14 +28,30 @@
 				<section class="col-5 main-content gutter">
 
 					<h2 class="fancy">Create a Blog</h2>
-					
+					<p>As part of the design project, you will create your own fully functional blog. Instead of us providing you the source code, you will be prompted by a series of questions that will help guide you along. If you've gone through both of the tutorials we suggested, you shouldn't have difficulty in answering these questions. Use the questions to reflect on what you've learned, and try to figure out whether you've <strong>truly</strong> understood the material.</p>
+
+					<div class="quiz-area" ng-controller="QuizController">
+						<div ng-repeat="question in questions">
+							<h3 id="question">{{question.question}}</h3>
+							<ul id="options">
+								<li ng-repeat="option in options">
+									<label>
+										<input type="radio" name="answer" value="{{option}}">{{option}}
+									</label>
+								</li>
+							</ul>
+							<p class="right" ng-show="correct">{{rightDescription}}</p>
+							<p class="wrong" ng-show="wrong">{{wrongDescription}}</p>
+							<button ng-click="checkAnswer()">Check Answer</button>
+							<!--<button ng-click="{{question.tries}} === 2">Show code</button>-->
+							<ui-codemirror ng-show="showCode">{{answerCode}}</ui-codemirror>
+						</div>
+					</div>
 
 				</section>
 
 			</div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="lib/app.js"></script>
-		<script src="lib/codemirror.js"></script>
+
 	</body>
 </html>
