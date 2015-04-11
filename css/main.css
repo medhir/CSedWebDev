@@ -153,7 +153,8 @@ body, html, .row, .grid-container, {
   Main page
   ========================================
 */
-.main-content * {
+
+.main-content p {
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -200,3 +201,18 @@ h4 {
   background-color: #fff;
   color: #FF4646;
 }
+
+/*
+  ========================================
+  Codemirror
+  ========================================
+*/
+
+.codeMirrorSection{
+  border: 1px solid black;
+  padding: 2px;
+  margin-left:10px;
+  max-width:700px;
+  height: auto;
+}
+

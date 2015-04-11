@@ -3,12 +3,13 @@
 	<head>
 		<title>What the Heck is Web Development?</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/glyphicons.css">
 		<link href='http://fonts.googleapis.com/css?family=Lobster|Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="">
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-        <script src="lib/app.js"></script>
+		<link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css">
+		<script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
+		<script type="text/javascript" src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+        <script type="text/javascript" src="lib/app.js"></script>
 	</head>	
 	<body>
 
@@ -41,11 +42,13 @@
 								</li>
 							</ul>
 							<p class="right" ng-show="question.correct">{{question.rightDescription}}</p>
-							<p class="wrong" ng-show="question.wrong">{{question.wrongDescription}} Please try again.</p>
-							<p class="wrong" ng-show="question.wrongAgain">{{question.wrongDescription}}</p>
+							<p class="wrong" ng-show="question.tries == 1">{{question.wrongDescription}} Please try again.</p>
+							<p class="wrong" ng-show="question.tries == 2">{{question.wrongDescription}}</p>
 							<button ng-click="checkAnswer(question)">Check Answer</button>
-							<button ng-click="populateCode(question)" ng-show="question.tries === 2 || question.correct">Show code</button>
-							<ui-codemirror ng-show="question.showCode"></ui-codemirror>
+							<button ng-click="showCode(question)" ng-show="question.tries === 2 || question.correct">Show code</button>
+							<section class="codeMirrorSection" ng-show="question.showCode">
+								<ui-codemirror ng-model="question.answerCode" ui-refresh="question.showCode"></ui-codemirror>
+							</section>
 						</div>
 					</div>
 
