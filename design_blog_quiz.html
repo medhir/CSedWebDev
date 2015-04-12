@@ -15,10 +15,10 @@
 	</head>	
 	<body>
 
-		<div class="grid-container">
-			<div class="row">
+		<div class="grid-container max-height">
+			<div class="row max-height">
 
-				<aside class="col-1 sidebar">
+				<aside class="col-1 sidebar max-height no-overflow">
 					<h2>What the Heck is Web Development?</h2>
 					<ul class="nav">
 						<li><a href="index.html">Home</a></li>
@@ -28,7 +28,7 @@
 					</ul>
 				</aside>
 
-				<section class="col-5 main-content gutter">
+				<section class="col-5 main-content gutter max-height scrollable">
 
 					<h2 class="fancy">Create a Blog</h2>
 					<p>As part of the design project, you will create your own fully functional blog. Instead of us providing you the source code, you will be prompted by a series of questions that will help guide you along. If you've gone through both of the tutorials we suggested, you shouldn't have difficulty in answering these questions. Use the questions to reflect on what you've learned, and try to figure out whether you've <strong>truly</strong> understood the material.</p>
@@ -47,8 +47,8 @@
 							<p class="wrong" ng-if="question.tries == 1"><span>{{question.wrongDescription}} Please try again.</span></p>
 							<p class="wrong" ng-if="question.tries == 2"><span>{{question.wrongDescription}}</span></p>
 							<div class="buttons">
-								<a href="#" ng-click="checkAnswer(question)">Check Answer</a>
-								<a href="#" ng-click="showCode(question)" ng-show="question.tries === 2 || question.correct">Show code</a>
+								<a href="" ng-click="checkAnswer(question)">Check Answer</a>
+								<a href="" ng-click="showCode(question)" ng-show="question.tries === 2 || question.correct">Show code</a>
 							</div>
 							<section class="codeMirrorSection" ng-show="question.showCode">
 								<div ui-codemirror="editorOptions" ng-model="question.answerCode" ui-refresh="question.showCode"></div>
