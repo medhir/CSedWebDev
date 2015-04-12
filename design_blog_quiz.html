@@ -3,7 +3,7 @@
 	<head>
 		<title>What the Heck is Web Development?</title>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link href='http://fonts.googleapis.com/css?family=Lobster|Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic|Lobster' rel='stylesheet' type='text/css'>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="bower_components/codemirror/lib/codemirror.css">
@@ -39,15 +39,17 @@
 							<ul id="options">
 								<li ng-repeat="option in question.options">
 									<label>
-										<input type="radio" name="answer" value="{{option}}">{{option}}
+										<input class="code" type="radio" name="answer" value="{{option}}">{{option}}
 									</label>
 								</li>
 							</ul>
-							<p class="right" ng-show="question.correct">{{question.rightDescription}}</p>
-							<p class="wrong" ng-show="question.tries == 1">{{question.wrongDescription}} Please try again.</p>
-							<p class="wrong" ng-show="question.tries == 2">{{question.wrongDescription}}</p>
-							<button ng-click="checkAnswer(question)">Check Answer</button>
-							<button ng-click="showCode(question)" ng-show="question.tries === 2 || question.correct">Show code</button>
+							<p class="right" ng-if="question.correct"><span>{{question.rightDescription}}</span></p>
+							<p class="wrong" ng-if="question.tries == 1"><span>{{question.wrongDescription}} Please try again.</span></p>
+							<p class="wrong" ng-if="question.tries == 2"><span>{{question.wrongDescription}}</span></p>
+							<div class="buttons">
+								<a href="#" ng-click="checkAnswer(question)">Check Answer</a>
+								<a href="#" ng-click="showCode(question)" ng-show="question.tries === 2 || question.correct">Show code</a>
+							</div>
 							<section class="codeMirrorSection" ng-show="question.showCode">
 								<div ui-codemirror="editorOptions" ng-model="question.answerCode" ui-refresh="question.showCode"></div>
 							</section>

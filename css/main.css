@@ -147,31 +147,24 @@ body, html, .row, .grid-container, {
   margin-left: 2px;
 }
 
-
 /*
   ========================================
-  Main page
-  ========================================
-*/
-
-.main-content p {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-/*
-  ========================================
-  Custom styles
+  Main page Custom styles
   ========================================
 */
 
 html {
-  font-family: 'Sanchez', serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .fancy {
   font-family: 'Lobster', cursive;
   color: #FF4646;
+}
+
+.main-content p {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 h2 {
@@ -189,7 +182,7 @@ h4 {
 .proj-title a {
   text-decoration: none;
   padding: 5px;
-  font-size: 0.85em;
+  font-size: 0.65em;
   background-color: #FF4646;
   border: 3px solid;
   border-color: #FF4646;
@@ -202,6 +195,70 @@ h4 {
   color: #FF4646;
 }
 
+strong {
+  font-weight: bold;
+}
+
+.break {
+  margin-bottom: 50px;
+}
+
+.main-content ul li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/*
+  ========================================
+  Quiz custom styles
+  ========================================
+*/
+
+.quiz-area h4 {
+  font-weight: bold;
+  font-size: 1.75em;
+  margin-top: 20px;
+}
+
+.right {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.right span {
+  padding: 10px; 
+  border: 5px solid rgb(0, 204, 0);
+}
+
+.wrong {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wrong span {
+  padding: 10px;
+  border: 5px solid rgb(255, 0, 0);
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.buttons a {
+  text-decoration: none;
+  background-color: #FF4646;
+  color: #fff;
+  padding: 5px;
+  margin-right: 10px;
+  border: 5px solid #FF4646;
+  border-radius: 5px;
+}
+
+.buttons a:hover {
+  background-color: #FFF;
+  color: #FF4646;
+}
+
 /*
   ========================================
   Codemirror
@@ -209,13 +266,12 @@ h4 {
 */
 
 .codeMirrorSection {
-  border: 3px solid #FF4646;
-  margin-top: 10px;
-  margin-left: 10px;
+  border: 5px solid #000;
+  border-radius: 5px;
+  margin: 30px 0px 30px 0px;
   max-width: 700px;
 }
 
 .codeMirrorSection div {
   height: auto;
 }
-
