@@ -44,6 +44,8 @@
 
 					<p>Instead of us providing you the source code, you will be prompted by a series of questions that will help guide you along. If you've gone through both of the tutorials we suggested, you shouldn't have difficulty in answering these questions. Use the questions to reflect on what you've learned, and try to figure out whether you've <strong>truly</strong> understood the material.</p>
 
+					<h4 class="heading">Design Fundamentals Project</h4>
+
 					<div class="quiz-area" ng-controller="QuizController">
 						<div ng-repeat="question in questions">
 							<div class="startPrompt">{{question.startPrompt}}</div>
@@ -66,7 +68,6 @@
 							<section class="codeMirrorSection" ng-show="question.showCode">
 								<div ui-codemirror="editorOptions" ng-model="question.answerCode" ui-refresh="question.showCode"></div>
 							</section>
-							<div class="endPrompt">{{question.endPrompt}}</div>
 						</div>
 					</div>
 

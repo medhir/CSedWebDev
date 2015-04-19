@@ -305,6 +305,16 @@ strong {
   ========================================
 */
 
+.startPrompt {
+  font-weight: lighter;
+  font-size: 1.15em;
+  line-height: 150%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 30px 20px;
+}
+
 .imageLinkWrap {
   margin-top: 10px;
 }
@@ -362,7 +372,7 @@ strong {
   border: 5px solid #000;
   border-radius: 5px;
   margin: 30px 0px 30px 0px;
-  max-width: 700px;
+  max-width: 100%;
 }
 
 .codeMirrorSection div {
