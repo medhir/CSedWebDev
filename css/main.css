@@ -145,6 +145,7 @@ table {
   text-decoration: none;
   border: 2px solid;
   border-color: rgb(47, 93, 124);
+  border-radius: 3px;
   background-color: #FFF;
   padding: 4px 5px;
 }
@@ -152,6 +153,11 @@ table {
 .nav a:hover {
   font-size: 1.15em;
   margin-left: 2px;
+}
+
+.nav a.current {
+  background-color: rgb(47, 93, 124);
+  color: #fff;
 }
 
 /*
@@ -199,21 +205,31 @@ h4 {
 
 .proj-title {
   margin-left: 55px;
+  margin-right: 55px;
+  border-bottom:;
 }
 
 
 .proj-title a {
   text-decoration: none;
-  padding: 5px;
-  font-size: 0.65em;
+  padding: 5px 25px 5px 5px;
+  font-size: 0.8em;
   border: 3px solid;
+  border-radius: 3px;
   border-color: #FF4646;
-  color: #FF4646;
+  background-color: #FF4646;
+  color: #fff;
 }
 
 .proj-title a:hover {
   background-color: #fff;
   color: #FF4646;
+}
+
+.list {
+  margin-left: 90px;
+  margin-right: 90px;
+  list-style-type: square;
 }
 
 strong {
@@ -249,9 +265,29 @@ strong {
   border-bottom: solid 2px #FF4646;
   margin-top: 35px;
   margin-right: 55px;
+} 
+
+.lineHack {
+  line-height: 100px;
 }
 
-#codeAcademy {
+.resourceLink {
+  text-decoration: none;
+  background-color: rgb(47, 93, 124);
+  border: 3px solid rgb(47, 93, 124);
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px 10px;
+  vertical-align: middle;
+  margin-left: 55px;
+}
+
+.resourceLink:hover {
+  background-color: #fff;
+  color: rgb(47, 93, 124);
+}
+
+.resourceImg {
   width: 80%;
   height: auto;
 }
@@ -261,6 +297,29 @@ strong {
   Quiz custom styles
   ========================================
 */
+
+.imageWrap {
+  margin-top: 10px;
+}
+
+.imageWrap a img {
+  border: 2px solid #000;
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.imageWrap a img:hover {
+  border: 2px solid #FF4646;
+}
+
+.caption {
+  font-weight: bold;
+  font-size: 1.15em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
 
 .quiz-area h4 {
   font-weight: bold;
