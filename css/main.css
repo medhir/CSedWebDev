@@ -179,7 +179,7 @@ html {
   overflow: scroll;
 }
 
-.main-content p, .quiz-area, .resource {
+.main-content > p, .quiz-area, .resource {
   margin-right: 55px;
   margin-left: 55px;
   padding-top: 15px;
@@ -324,7 +324,7 @@ strong {
   font-weight: bold;
   font-size: 1.15em;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -334,23 +334,17 @@ strong {
   margin-top: 20px;
 }
 
-.right {
-  margin-top: 10px;
+.feedback {
+  margin-top: 10px; 
   margin-bottom: 10px;
+  padding: 10px 20px;
 }
 
-.right span {
-  padding: 10px; 
+.right {
   border: 5px solid rgb(0, 204, 0);
 }
 
 .wrong {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.wrong span {
-  padding: 10px;
   border: 5px solid rgb(255, 0, 0);
 }
 

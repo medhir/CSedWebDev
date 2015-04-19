@@ -46,6 +46,7 @@
 
 					<div class="quiz-area" ng-controller="QuizController">
 						<div ng-repeat="question in questions">
+							<div class="startPrompt">{{question.startPrompt}}</div>
 							<h4 id="question">{{question.question}}</h4>
 							<ul id="options">
 								<li ng-repeat="option in question.options">
@@ -54,16 +55,18 @@
 									</label>
 								</li>
 							</ul>
-							<p class="right" ng-if="question.correct"><span>{{question.rightDescription}}</span></p>
-							<p class="wrong" ng-if="question.tries == 1"><span>{{question.wrongDescription}} Please try again.</span></p>
-							<p class="wrong" ng-if="question.tries == 2"><span>{{question.wrongDescription}}</span></p>
+							<p class="feedback right" ng-if="question.correct">{{question.rightDescription}}</p>
+							<p class="feedback wrong" ng-if="question.tries == 1">{{question.wrongDescription}} Please try again.</p>
+							<p class="feedback wrong" ng-if="question.tries == 2">{{question.wrongDescription}}</p>
 							<div class="button" id="quizButtons">
-								<a href="" ng-click="checkAnswer(question)">Check Answer</a>
-								<a href="" ng-click="showCode(question)" ng-show="question.tries === 2 || question.correct">Show code</a>
+								<a href="" ng-click="checkAnswer(question)" ng-hide="question.correct">Check Answer</a>
+								<a href="" ng-click="showCode(question)" ng-hide="quesiton.tries < 2 || !question.correct || question.showCode">Show code</a>
+								<a href="" ng-click="hideCode(question)" ng-show="question.showCode">Hide code</a>
 							</div>
 							<section class="codeMirrorSection" ng-show="question.showCode">
 								<div ui-codemirror="editorOptions" ng-model="question.answerCode" ui-refresh="question.showCode"></div>
 							</section>
+							<div class="endPrompt">{{question.endPrompt}}</div>
 						</div>
 					</div>
 
