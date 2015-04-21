@@ -59,10 +59,10 @@
 							</ul>
 							<p class="feedback right" ng-if="question.correct">{{question.rightDescription}}</p>
 							<p class="feedback wrong" ng-if="question.tries == 1">{{question.wrongDescription}} Please try again.</p>
-							<p class="feedback wrong" ng-if="question.tries == 2">{{question.wrongDescription}}</p>
+							<p class="feedback wrong" ng-if="question.tries >= 2">{{question.wrongDescription}}</p>
 							<div class="button" id="quizButtons">
 								<a href="" ng-click="checkAnswer(question)" ng-hide="question.correct">Check Answer</a>
-								<a href="" ng-click="showCode(question)" ng-hide="quesiton.tries < 2 || !question.correct || question.showCode">Show code</a>
+								<a href="" ng-click="showCode(question)" ng-show="question.tries >= 2 || question.correct">Show code</a>
 								<a href="" ng-click="hideCode(question)" ng-show="question.showCode">Hide code</a>
 							</div>
 							<section class="codeMirrorSection" ng-show="question.showCode">
