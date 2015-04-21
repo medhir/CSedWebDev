@@ -48,7 +48,7 @@
 
 					<div class="quiz-area" ng-controller="QuizController">
 						<div ng-repeat="question in questions">
-							<div class="startPrompt">{{question.startPrompt}}</div>
+							<div ng-show="question.startPrompt !== undefined" class="startPrompt">{{question.startPrompt}}</div>
 							<h4 id="question">{{question.question}}</h4>
 							<ul id="options">
 								<li ng-repeat="option in question.options">
